@@ -53,9 +53,9 @@ public class StartupRunner implements CommandLineRunner {
         }
 
         if (sneakerRepository.count() == 0) {
-            sneakerRepository.save(new Sneaker("Air Force 1"));
-            sneakerRepository.save(new Sneaker("Stan Smith"));
-            sneakerRepository.save(new Sneaker("990v5"));
+            sneakerRepository.save(new Sneaker("Air Force 1", 110.00, 1982));
+            sneakerRepository.save(new Sneaker("Stan Smith", 85.00, 1973));
+            sneakerRepository.save(new Sneaker("990v5", 175.00, 2019));
         }
     }
 

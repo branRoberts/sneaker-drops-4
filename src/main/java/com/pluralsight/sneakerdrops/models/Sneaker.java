@@ -12,9 +12,13 @@ public class Sneaker {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    private double price;
+    private int releaseYear;
 
-    public Sneaker(String name) {
+    public Sneaker(String name, double price, int releaseYear) {
         this.name = name;
+        this.price = price;
+        this.releaseYear = releaseYear;
     }
 
     public Sneaker() {}
@@ -24,6 +28,12 @@ public class Sneaker {
 
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
+
+    public double getPrice() { return price; }
+    public void setPrice(double price) { this.price = price; }
+
+    public int getReleaseYear() { return releaseYear; }
+    public void setReleaseYear(int releaseYear) { this.releaseYear = releaseYear; }
 
     @Override
     public String toString() {
